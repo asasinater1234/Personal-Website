@@ -41,9 +41,7 @@ body::before {
 /* ── NAV ── */
 nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 100;
   display: flex;
   justify-content: space-between;
@@ -313,9 +311,7 @@ section {
 .skill-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   height: 2px;
   background: linear-gradient(90deg, var(--accent), var(--accent2));
   transform: scaleX(0);
@@ -375,8 +371,7 @@ section {
   content: '';
   position: absolute;
   left: 132px;
-  top: 0;
-  bottom: -2rem;
+  top: 0; bottom: -2rem;
   width: 1px;
   background: var(--border);
 }
@@ -455,8 +450,7 @@ section {
 .project-card::after {
   content: '⬡';
   position: absolute;
-  right: -20px;
-  bottom: -20px;
+  right: -20px; bottom: -20px;
   font-size: 8rem;
   color: rgba(0, 229, 255, 0.03);
   line-height: 1;
@@ -592,25 +586,13 @@ footer {
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes rotate {
-  from {
-    transform: translateY(-50%) rotate(0deg);
-  }
-
-  to {
-    transform: translateY(-50%) rotate(360deg);
-  }
+  from { transform: translateY(-50%) rotate(0deg); }
+  to   { transform: translateY(-50%) rotate(360deg); }
 }
 
 .reveal {
@@ -626,45 +608,17 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .hero-badge {
-    display: none;
-  }
+  .hero-badge { display: none; }
 }
 
 @media (max-width: 640px) {
-  nav {
-    padding: 1rem 1.5rem;
-  }
-
-  section {
-    padding: 4rem 1.5rem;
-  }
-
-  .hero {
-    padding: 6rem 1.5rem 3rem;
-  }
-
-  footer {
-    padding: 2rem 1.5rem;
-  }
-
-  .timeline-item {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline-item::before {
-    display: none;
-  }
-
-  .timeline-dot {
-    display: none;
-  }
-
-  .timeline-date {
-    text-align: left;
-  }
-
-  .project-card {
-    grid-template-columns: 1fr;
-  }
+  nav { padding: 1rem 1.5rem; }
+  section { padding: 4rem 1.5rem; }
+  .hero { padding: 6rem 1.5rem 3rem; }
+  footer { padding: 2rem 1.5rem; }
+  .timeline-item { grid-template-columns: 1fr; }
+  .timeline-item::before { display: none; }
+  .timeline-dot { display: none; }
+  .timeline-date { text-align: left; }
+  .project-card { grid-template-columns: 1fr; }
 }
