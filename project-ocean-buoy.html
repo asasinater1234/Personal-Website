@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous Ocean-Cleaning Buoy — Ramanathan A.S.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project-page.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo nav-back">← RA_SBM</a>
+    <ul class="nav-links">
+      <li><a href="index.html#projects">All Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <div class="proj-hero proj-hero--teal">
+    <div class="proj-hero-content">
+      <p class="section-label">// Robotics · Marine Tech · 2022</p>
+      <h1 class="proj-title">Autonomous Ocean-Cleaning Buoy</h1>
+      <p class="proj-subtitle">A floating robotic system for autonomous collection of surface trash from water bodies — Runners-Up, IIT Madras Make-a-Thon</p>
+      <div class="proj-badges">
+        <span class="badge badge-silver">🥈 2nd Place — IIT Madras Make-a-Thon 2022</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="proj-main">
+
+    <!-- OVERVIEW -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 01 — Overview</p>
+      <h2 class="section-title">What Is It?</h2>
+      <p class="proj-body">
+        The Autonomous Ocean-Cleaning Buoy is a floating robotic platform engineered to navigate water surfaces and collect floating debris autonomously. Motivated by the growing crisis of marine plastic pollution, the project demonstrates how low-cost robotics can provide a scalable solution for waterway cleaning.
+      </p>
+      <p class="proj-body">
+        The buoy integrates a custom CAD-designed chassis, Arduino-based motor and sensor control, and autonomous navigation logic to sweep and collect trash without human intervention. The project earned 2nd Place (Runners-Up) at the prestigious IIT Madras Make-a-Thon competition.
+      </p>
+    </section>
+
+    <div class="proj-divider"></div>
+
+    <!-- GALLERY -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 02 — Gallery</p>
+      <h2 class="section-title">Photos & Demo</h2>
+      <div class="gallery-grid" id="gallery-buoy">
+        <div class="gallery-item">
+          <img src="Buoy-Technical-Diagram.jpg" alt="Autonomous Ocean-Cleaning Buoy technical diagram">
+          <p class="gallery-caption">Technical diagram — mechanical and electronic system overview</p>
+        </div>
+        <div class="gallery-item">
+          <img src="Robot(buoy).jpg" alt="Autonomous Ocean-Cleaning Buoy robot">
+          <p class="gallery-caption">The finished buoy robot</p>
+        </div>
+        <div class="gallery-item">
+          <img src="Team(buoy)%20(1).jpg" alt="Team at IIT Madras Make-a-Thon">
+          <p class="gallery-caption">Team at IIT Madras Make-a-Thon 2022</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="proj-divider"></div>
+
+    <!-- TECH STACK -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 03 — Technical Stack</p>
+      <h2 class="section-title">How It Works</h2>
+      <div class="tech-grid">
+        <div class="tech-block">
+          <p class="tech-category">HARDWARE</p>
+          <div class="skill-items">
+            <span class="tag">Arduino</span>
+            <span class="tag">DC Motors</span>
+            <span class="tag">Ultrasonic Sensors</span>
+            <span class="tag">Servo Motors</span>
+          </div>
+        </div>
+        <div class="tech-block">
+          <p class="tech-category">DESIGN</p>
+          <div class="skill-items">
+            <span class="tag">CAD / Fusion 360</span>
+            <span class="tag">3D Modelling</span>
+            <span class="tag">Buoyancy Design</span>
+            <span class="tag">Rapid Prototyping</span>
+          </div>
+        </div>
+        <div class="tech-block">
+          <p class="tech-category">SYSTEMS</p>
+          <div class="skill-items">
+            <span class="tag">Autonomous Nav</span>
+            <span class="tag">Embedded C++</span>
+            <span class="tag">Motor Control</span>
+            <span class="tag">Marine Tech</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div>
+            <h4>Mechanical Design</h4>
+            <p>Designed the buoy chassis and collection mechanism in CAD (Fusion 360), optimising for buoyancy, stability, and compact motor mounting. Iterated through multiple prototypes.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div>
+            <h4>Electronics Integration</h4>
+            <p>Wired and programmed an Arduino-based control system: motor drivers for propulsion, ultrasonic sensors for obstacle detection, and servo actuation for the collection scoop.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div>
+            <h4>Autonomous Navigation</h4>
+            <p>Implemented a sweep-and-collect navigation algorithm that guides the buoy across a defined water area, avoiding obstacles and depositing collected debris into an onboard bin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="proj-divider"></div>
+
+    <!-- DOCUMENTS -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 04 — Documents & Files</p>
+      <h2 class="section-title">Resources</h2>
+      <div class="docs-list" id="docs-buoy">
+        <a href="Marine Debris 2022- Prototype.pdf" class="doc-item" target="_blank">
+          <div class="doc-icon">PDF</div>
+          <div>
+            <p class="doc-name">Marine Debris 2022 — Prototype Report</p>
+            <p class="doc-meta">PDF · Prototype documentation</p>
+          </div>
+        </a>
+        <a href="Junior%20Make-a-thon_Data%20Set%208.pdf" class="doc-item" target="_blank">
+          <div class="doc-icon">PDF</div>
+          <div>
+            <p class="doc-name">IIT Madras Make-a-Thon — Certificate</p>
+            <p class="doc-meta">PDF · Participation & achievement certificate</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="proj-divider"></div>
+
+    <!-- RESULTS -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 05 — Results & Impact</p>
+      <h2 class="section-title">Outcome</h2>
+      <div class="results-grid">
+        <div class="result-card">
+          <p class="result-num">2nd</p>
+          <p class="result-label">Place (Runners-Up) — IIT Madras Make-a-Thon 2022</p>
+        </div>
+        <div class="result-card">
+          <p class="result-num">Fully</p>
+          <p class="result-label">Autonomous sweep-and-collect operation with no human input</p>
+        </div>
+        <div class="result-card">
+          <p class="result-num">Low-cost</p>
+          <p class="result-label">Scalable hardware design using off-the-shelf Arduino components</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="proj-footer-nav">
+    <a href="project-bed-checker.html" class="btn btn-outline">← Previous project</a>
+    <a href="project-amr.html" class="btn btn-primary">Next project -></a>
+  </div>
+
+  <footer>
+    Built by Ramanathan Alagu Subramaniam
+  </footer>
+
+  <script>
+    document.body.classList.add('has-reveal');
+    const revealItems = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      revealItems.forEach(item => {
+        if (item.getBoundingClientRect().top < window.innerHeight - 80) {
+          item.classList.add('visible');
+        }
+      });
+    };
+    revealOnScroll();
+    window.addEventListener('scroll', revealOnScroll);
+  </script>
+</body>
+</html>

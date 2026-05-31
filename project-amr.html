@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous Payload Delivery AMR — Ramanathan A.S.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project-page.css">
+  <style>
+    .proj-hero--purple::before {
+      background:
+        radial-gradient(ellipse at 65% 45%, rgba(139, 92, 246, 0.15) 0%, transparent 65%),
+        radial-gradient(ellipse at 20% 70%, rgba(0, 229, 255, 0.08) 0%, transparent 55%),
+        linear-gradient(135deg, rgba(139, 92, 246, 0.05), transparent);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo nav-back">← RA_SBM</a>
+    <ul class="nav-links">
+      <li><a href="index.html#projects">All Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <div class="proj-hero proj-hero--purple">
+    <div class="proj-hero-content">
+      <p class="section-label">// Robotics · Autonomous Systems · NUS CDE2310</p>
+      <h1 class="proj-title">Autonomous Payload Delivery AMR</h1>
+      <p class="proj-subtitle">A TurtleBot3-based autonomous mobile robot that maps unknown mazes via SLAM, detects ArUco marker targets with computer vision, and deploys a flywheel-launched payload on arrival</p>
+      <div class="proj-badges">
+        <span class="badge badge-silver">NUS CDE2310 — Group Project</span>
+        <a href="https://github.com/Kailer811/r2auto_nav_CDE2310" target="_blank" rel="noreferrer" class="badge badge-github">&#9167; GitHub — View Code</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="proj-main">
+
+    <!-- OVERVIEW -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 01 — Overview</p>
+      <h2 class="section-title">What Is It?</h2>
+      <p class="proj-body">
+        The Autonomous Payload Delivery AMR is a fully autonomous mobile robot built on the TurtleBot3 platform for the NUS CDE2310 module. Given no prior knowledge of its environment, the robot explores an unknown maze in real time using 2D LiDAR-based SLAM, building a map as it moves.
+      </p>
+      <p class="proj-body">
+        When its onboard camera detects an ArUco fiducial marker — the delivery target — the robot transitions from exploration mode to docking and delivery mode, aligns precisely with the target station, and launches ping pong balls through a custom flywheel mechanism. The entire mission cycle runs without human input, coordinated by a Finite State Machine managing all operating modes.
+      </p>
+    </section>
+
+    <div class="proj-divider"></div>
+
+    <!-- GALLERY -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 02 — Gallery</p>
+      <h2 class="section-title">Photos & Diagrams</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Robot%20CAD%20Model%20(AMR).jpg" alt="Autonomous Payload Delivery AMR CAD model">
+          <p class="gallery-caption">3D CAD model — launcher assembly, sensor mounts, and chassis</p>
+        </div>
+        <div class="gallery-item">
+          <img src="ROS%20Node%20Architecture%20(AMR).jpg" alt="ROS2 node architecture diagram">
+          <p class="gallery-caption">ROS2 node architecture — SLAM, exploration, vision, and FSM nodes</p>
+        </div>
+        <div class="gallery-item">
+          <img src="Team%20Photo%20(AMR).jpg" alt="Team photo — NUS CDE2310 Group 8">
+          <p class="gallery-caption">Team — NUS CDE2310 Group 8</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="proj-divider"></div>
+
+    <!-- TECH STACK -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 03 — Technical Stack</p>
+      <h2 class="section-title">How It Works</h2>
+      <div class="tech-grid">
+        <div class="tech-block">
+          <p class="tech-category">HARDWARE</p>
+          <div class="skill-items">
+            <span class="tag">TurtleBot3</span>
+            <span class="tag">Raspberry Pi 4</span>
+            <span class="tag">OpenCR 1.0</span>
+            <span class="tag">2D LiDAR</span>
+            <span class="tag">RPi Camera</span>
+            <span class="tag">Flywheel Launcher</span>
+          </div>
+        </div>
+        <div class="tech-block">
+          <p class="tech-category">SOFTWARE</p>
+          <div class="skill-items">
+            <span class="tag">ROS2 Humble</span>
+            <span class="tag">Python</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">SLAM</span>
+            <span class="tag">ArUco Detection</span>
+          </div>
+        </div>
+        <div class="tech-block">
+          <p class="tech-category">DESIGN</p>
+          <div class="skill-items">
+            <span class="tag">3D Printing</span>
+            <span class="tag">CAD Modelling</span>
+            <span class="tag">MOSFET Circuits</span>
+            <span class="tag">Servo Control</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div>
+            <h4>Autonomous Maze Exploration</h4>
+            <p>The robot uses 2D LiDAR with frontier-based SLAM to explore an unknown environment in real time, building an occupancy grid map and navigating to unmapped frontiers until the full maze is charted.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div>
+            <h4>Vision-Based Target Detection</h4>
+            <p>While exploring, the onboard Raspberry Pi camera continuously scans for ArUco fiducial markers using OpenCV. On detection, the FSM triggers a mode switch — the robot halts exploration and begins aligning to the target station.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div>
+            <h4>Payload Deployment</h4>
+            <p>Once docked and aligned, a MOSFET-controlled DC flywheel motor spins up and a servo-driven feeder mechanism releases ping pong balls into the launcher, delivering the payload to the target. The 9-ball reservoir completes the full mission cycle autonomously.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="proj-divider"></div>
+
+    <!-- DOCUMENTS -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 04 — Documents & Files</p>
+      <h2 class="section-title">Resources</h2>
+      <div class="docs-list">
+        <a href="G2%20Report%20Group%208(AMR).pdf" class="doc-item" target="_blank">
+          <div class="doc-icon">PDF</div>
+          <div>
+            <p class="doc-name">CDE2310 Group 8 — Final Project Report</p>
+            <p class="doc-meta">PDF · Full technical report</p>
+          </div>
+        </a>
+        <a href="https://github.com/Kailer811/r2auto_nav_CDE2310" class="doc-item" target="_blank" rel="noreferrer">
+          <div class="doc-icon">GH</div>
+          <div>
+            <p class="doc-name">Source Code — GitHub</p>
+            <p class="doc-meta">github.com/Kailer811/r2auto_nav_CDE2310</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="proj-divider"></div>
+
+    <!-- RESULTS -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 05 — Results & Impact</p>
+      <h2 class="section-title">Outcome</h2>
+      <div class="results-grid">
+        <div class="result-card">
+          <p class="result-num">Full</p>
+          <p class="result-label">Autonomous mission cycle — explore, detect, dock, and deliver with no human input</p>
+        </div>
+        <div class="result-card">
+          <p class="result-num">SLAM</p>
+          <p class="result-label">Real-time occupancy grid mapping of unknown maze environments using frontier-based exploration</p>
+        </div>
+        <div class="result-card">
+          <p class="result-num">ROS2</p>
+          <p class="result-label">Modular multi-node architecture with SLAM, vision, FSM, and launcher control nodes</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="proj-footer-nav">
+    <a href="project-ocean-buoy.html" class="btn btn-outline">← Previous project</a>
+    <a href="index.html#projects" class="btn btn-primary">Back to all projects -></a>
+  </div>
+
+  <footer>
+    Built by Ramanathan Alagu Subramaniam
+  </footer>
+
+  <script>
+    document.body.classList.add('has-reveal');
+    const revealItems = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      revealItems.forEach(item => {
+        if (item.getBoundingClientRect().top < window.innerHeight - 80) {
+          item.classList.add('visible');
+        }
+      });
+    };
+    revealOnScroll();
+    window.addEventListener('scroll', revealOnScroll);
+  </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Bed Checker — Ramanathan A.S.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project-page.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo nav-back">← RA_SBM</a>
+    <ul class="nav-links">
+      <li><a href="index.html#projects">All Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <div class="proj-hero">
+    <div class="proj-hero-content">
+      <p class="section-label">// Computer Vision · AI · 2026</p>
+      <h1 class="proj-title">AI Bed Checker</h1>
+      <p class="proj-subtitle">Autonomous hotel bed quality-inspection system using YOLOv8 object detection — 1st Place, RoboRoarZ AI Challenge (SUTD 2026)</p>
+      <div class="proj-badges">
+        <span class="badge badge-gold">🥇 1st Place — SUTD RoboRoarZ 2026</span>
+        <a href="https://github.com/asasinater1234/mAId" target="_blank" rel="noreferrer" class="badge badge-github">&#9167; GitHub — View Code</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="proj-main">
+
+    <!-- OVERVIEW -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 01 — Overview</p>
+      <h2 class="section-title">What Is It?</h2>
+      <p class="proj-body">
+        The AI Bed Checker is a real-time computer vision system that determines whether a hotel bed has been made to standard. A camera feed is processed through a fine-tuned YOLOv8 model that classifies the bed state and highlights any issues — wrinkled sheets, displaced pillows, missing covers — allowing housekeeping supervisors to run automated checks across dozens of rooms without manual inspection.
+      </p>
+      <p class="proj-body">
+        The project was built end-to-end: dataset collection and annotation, model training, evaluation, and a lightweight inference demo. It won 1st Place at the RoboRoarZ AI Challenge organised by the Singapore University of Technology and Design (SUTD) in 2026.
+      </p>
+    </section>
+
+    <div class="proj-divider"></div>
+
+    <!-- GALLERY -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 02 — Gallery</p>
+      <h2 class="section-title">Photos & Demo</h2>
+      <div class="gallery-grid" id="gallery-bed">
+        <div class="gallery-item">
+          <img src="Bed-Check-Preview.png" alt="AI Bed Checker system preview">
+          <p class="gallery-caption">AI Bed Checker — live inference preview</p>
+        </div>
+        <div class="gallery-item">
+          <img src="Winning-Image(Bed).jpg" alt="1st place win at RoboRoarZ AI Challenge">
+          <p class="gallery-caption">1st Place — RoboRoarZ AI Challenge, SUTD 2026</p>
+        </div>
+        <div class="gallery-item">
+          <img src="working%20in%20Hackathon(bed).jpg" alt="Working on AI Bed Checker at the hackathon">
+          <p class="gallery-caption">Building the AI Bed Checker at the hackathon</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="proj-divider"></div>
+
+    <!-- TECH STACK -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 03 — Technical Stack</p>
+      <h2 class="section-title">How It Works</h2>
+      <div class="tech-grid">
+        <div class="tech-block">
+          <p class="tech-category">MODEL</p>
+          <div class="skill-items">
+            <span class="tag">YOLOv8</span>
+            <span class="tag">Custom Dataset</span>
+            <span class="tag">Transfer Learning</span>
+            <span class="tag">Object Detection</span>
+          </div>
+        </div>
+        <div class="tech-block">
+          <p class="tech-category">FRAMEWORKS</p>
+          <div class="skill-items">
+            <span class="tag">PyTorch</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">NumPy</span>
+          </div>
+        </div>
+        <div class="tech-block">
+          <p class="tech-category">PIPELINE</p>
+          <div class="skill-items">
+            <span class="tag">Data Annotation</span>
+            <span class="tag">Model Training</span>
+            <span class="tag">Inference API</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div>
+            <h4>Dataset Collection</h4>
+            <p>Captured and curated images of beds in various states — made, unmade, partially made — and annotated them with bounding boxes and class labels.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div>
+            <h4>Model Training</h4>
+            <p>Fine-tuned YOLOv8 on the annotated dataset using transfer learning. Optimised for accuracy and inference speed suitable for real-time use.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div>
+            <h4>Inference & Demo</h4>
+            <p>Built a live demo pipeline that takes a camera feed or image input and outputs a classification with confidence score and visual bounding boxes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="proj-divider"></div>
+
+    <!-- DOCUMENTS -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 04 — Documents & Files</p>
+      <h2 class="section-title">Resources</h2>
+      <div class="docs-list" id="docs-bed">
+        <a href="Bed-Checker-Pitch-Deck.pdf" class="doc-item" target="_blank">
+          <div class="doc-icon">PDF</div>
+          <div>
+            <p class="doc-name">AI Bed Checker — Pitch Deck</p>
+            <p class="doc-meta">PDF · Presentation slides</p>
+          </div>
+        </a>
+        <a href="https://github.com/asasinater1234/mAId" class="doc-item" target="_blank" rel="noreferrer">
+          <div class="doc-icon">GH</div>
+          <div>
+            <p class="doc-name">Source Code — GitHub</p>
+            <p class="doc-meta">github.com/asasinater1234/mAId</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="proj-divider"></div>
+
+    <!-- RESULTS -->
+    <section class="proj-section reveal">
+      <p class="section-label">// 05 — Results & Impact</p>
+      <h2 class="section-title">Outcome</h2>
+      <div class="results-grid">
+        <div class="result-card">
+          <p class="result-num">1st</p>
+          <p class="result-label">Place — RoboRoarZ AI Challenge, SUTD 2026</p>
+        </div>
+        <div class="result-card">
+          <p class="result-num">YOLOv8</p>
+          <p class="result-label">State-of-the-art real-time object detection backbone</p>
+        </div>
+        <div class="result-card">
+          <p class="result-num">End-to-end</p>
+          <p class="result-label">Dataset → Training → Live inference pipeline</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="proj-footer-nav">
+    <a href="index.html#projects" class="btn btn-outline">← Back to all projects</a>
+    <a href="project-ocean-buoy.html" class="btn btn-primary">Next project -></a>
+  </div>
+
+  <footer>
+    Built by Ramanathan Alagu Subramaniam
+  </footer>
+
+  <script>
+    document.body.classList.add('has-reveal');
+    const revealItems = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      revealItems.forEach(item => {
+        if (item.getBoundingClientRect().top < window.innerHeight - 80) {
+          item.classList.add('visible');
+        }
+      });
+    };
+    revealOnScroll();
+    window.addEventListener('scroll', revealOnScroll);
+  </script>
+</body>
+</html>
